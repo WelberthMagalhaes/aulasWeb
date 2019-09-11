@@ -1,29 +1,42 @@
 /* Estilos para tabelas*/
-
 /*seletor -> table */
-table{
+table {
   width: 100%;
 }
 
-table, th, td{
+table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-th, td{
+th, td {
   /* espaço/margem/espaçamento */
-  padding:10px;
+  padding: 10px;
 }
 
-th{
+th {
   font-size: 14pt;
   font-family: tahoma;
 }
 
-
-.destaque{
-
+.destaque {
   font-size: 18pt;
-  color: #090674;
-  background-color: #d5c6a1;
+  color: #6b6b6c;
+}
+
+
+tbody tr:hover {
+  background-color: #a5daf2
+}
+
+thead tr:hover{
+  background-color: #043766
+}
+
+tfoot tr:hover{
+  background-color: #b1da58
+}
+
+tr:nth-child(even){
+  background-color: #c6c6c6;
 }

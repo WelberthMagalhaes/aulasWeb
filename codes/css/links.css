@@ -1,0 +1,25 @@
+a{
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:link{
+  text-decoration: underline;
+  color: yellow;
+}
+
+a:visited{
+  text-decoration: underline;
+  background-color: #a9a9a9;
+}
+
+a:hover{
+background-color: #c3f0ad
+}
+
+a:active{
+  background-color: green;
+  color: black;
+}
