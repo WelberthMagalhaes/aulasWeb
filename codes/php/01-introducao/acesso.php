@@ -15,3 +15,5 @@
     </form>
   </body>
 </html>
+<!-- php -S localhost:8000  para iniciar servidor para ouvir somente localhost
+      fazer isso na pasta que está os arquivos-->
