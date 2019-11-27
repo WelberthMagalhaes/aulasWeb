@@ -4,23 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PaginasController extends Controller
-{
-  public function welcome(){
 
-    return view('welcome');
-  }
+class PaginasController extends Controller {
 
-  public function index(){
-    return view('principal');
-    //return "Página Principal";
-  }
 
-  public function listar(){
+    public function welcome() {
+      return view('welcome');
+    }
 
-    $lista = ['Ana', 'Brígida', 'Hugo', 'João', 'Pedro', 'Ricardo'];
+    public function index(){
+      return view('principal');
+    }
 
-    return view('lista')->with('lista', $lista);
-  }
+    public function listar() {
+
+      $lista = ['Ana', 'Brígida', 'Hugo', 'João', 'Pedro', 'Ricardo'];
+
+      return view('lista')->with('lista', $lista);
+
+
+    }
+
 
 }

@@ -15,6 +15,15 @@ Route::get('/welcome', 'PaginasController@welcome');
 
 Route::get('/', 'PaginasController@index');
 
-Route::get('/listar','PaginasController@listar');
+Route::get('/listar', 'PaginasController@listar');
 
-Route::get('/estados','EstadoController@index');
+Route::get('/estados', 'EstadoController@index');
+
+Route::get('/disciplinas', 'DisciplinaController@index');
+Route::get('/alunos', 'AlunoController@index');
+
+// Route::get('/cidades', 'CidadeController@index');
+// Route::get('/cidades/incluir', 'CidadeController@Create');
+// Route::get('/cidades/salvar', 'CidadeController@store');
+
+Route::resource('/cidades', 'CidadeController');

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Disciplina;
+use App\Aluno;
 use Illuminate\Http\Request;
 
-class DisciplinaController extends Controller
+class AlunoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,8 @@ class DisciplinaController extends Controller
      */
     public function index()
     {
-        $disciplinas = Disciplina::orderBy('nome')->get();
-        return view ('disciplinas.index', [ 'disciplinas' => $disciplinas]);  
-        
+        $alunos = Aluno::orderBy('nome')->get();
+        return view ('alunos.index', [ 'alunos' => $alunos]);    
     }
 
     /**
@@ -43,10 +42,10 @@ class DisciplinaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Disciplina  $disciplina
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function show(Disciplina $disciplina)
+    public function show(Aluno $aluno)
     {
         //
     }
@@ -54,10 +53,10 @@ class DisciplinaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Disciplina  $disciplina
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function edit(Disciplina $disciplina)
+    public function edit(Aluno $aluno)
     {
         //
     }
@@ -66,10 +65,10 @@ class DisciplinaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Disciplina  $disciplina
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Disciplina $disciplina)
+    public function update(Request $request, Aluno $aluno)
     {
         //
     }
@@ -77,10 +76,10 @@ class DisciplinaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Disciplina  $disciplina
+     * @param  \App\Aluno  $aluno
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Disciplina $disciplina)
+    public function destroy(Aluno $aluno)
     {
         //
     }

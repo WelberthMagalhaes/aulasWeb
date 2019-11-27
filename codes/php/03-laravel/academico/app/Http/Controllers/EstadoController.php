@@ -14,11 +14,12 @@ class EstadoController extends Controller
      */
     public function index()
     {
-      // Model -> recuperação dos dados
-      $estados = Estado::orderBy('nome')->get();
+        // Model -> recuperação dos dados
+        $estados = Estado::orderBy('nome')->get();
 
-      // View -> apresentar
-      return view('estados.index')->with('estados', $estados);
+        // View -> apresentar
+        return view('estados.index')
+                ->with('estados', $estados);
     }
 
     /**
