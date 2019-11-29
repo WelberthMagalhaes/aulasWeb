@@ -38,7 +38,23 @@ class CidadeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request); //faz o dump(printf da variavel e encerra
+
+        //Validação
+
+        //Gravar
+        //Opção1
+        // $c = new Cidade;
+        // $c->nome = $request->nome;
+        // $c->estado_id = $request->estado_id;
+        // $c->save();
+
+        //Opção2
+        Cidade::create($request->all());//nome das tags de entrada com mesmo nome do BD
+
+        //return redirect('/cidades');
+        return redirect()->route('cidades.index');
+
     }
 
     /**
@@ -48,8 +64,9 @@ class CidadeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Cidade $cidade)
-    {
-        //
+    { //public function show($id){ $cidade = Cidade::find($id); }
+        //dd($cidade);
+        return view('cidades.show', ['cidade' => $cidade]);
     }
 
     /**
@@ -60,7 +77,9 @@ class CidadeController extends Controller
      */
     public function edit(Cidade $cidade)
     {
-        //
+      $estados = Estado::orderBy('nome')->get();
+      return view('cidades.edit', ['estados' => $estados, 'cidade' => $cidade]);
+
     }
 
     /**
@@ -72,7 +91,7 @@ class CidadeController extends Controller
      */
     public function update(Request $request, Cidade $cidade)
     {
-        //
+        dd($request);
     }
 
     /**
