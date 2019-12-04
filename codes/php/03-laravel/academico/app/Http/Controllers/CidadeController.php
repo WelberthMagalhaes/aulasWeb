@@ -89,10 +89,22 @@ class CidadeController extends Controller
      * @param  \App\Cidade  $cidade
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cidade $cidade)
+    public function update(Request $request, Cidade $cidade)//$cidade recebe o id passado pelo edit.blade no campo action do form
     {
-        dd($request);
+          //Validação
+
+          //Gravar 01
+
+          //Gravar 02
+          $cidade->fill($request->all());// Atualiza os campos do objeto
+          $cidade->save(); // Persiste no banco de dados
+
+          session()->flash('mensagem', 'Cidade atualizada com sucesso!');
+
+          return redirect()->route('cidades.index');
     }
+
+
 
     /**
      * Remove the specified resource from storage.
@@ -102,6 +114,10 @@ class CidadeController extends Controller
      */
     public function destroy(Cidade $cidade)
     {
-        //
+        // Verificar se o registro pode ser excluído
+
+        $cidade->delete();
+
+        return redirect()->route('cidades.index');
     }
 }
