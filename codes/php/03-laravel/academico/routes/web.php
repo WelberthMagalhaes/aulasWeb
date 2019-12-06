@@ -27,3 +27,7 @@ Route::get('/alunos', 'AlunoController@index');
 // Route::get('/cidades/salvar', 'CidadeController@store');
 
 Route::resource('/cidades', 'CidadeController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
